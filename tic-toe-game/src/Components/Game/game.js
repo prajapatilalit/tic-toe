@@ -22,8 +22,6 @@ const Game = () => {
     setXisNext(!xIsNext);
   };
 
-  const nextTo = () => {};
-
   const renderMoves = () => (
     <button onClick={() => setBoard(Array(9).fill(null))}>Start Game</button>
   );
