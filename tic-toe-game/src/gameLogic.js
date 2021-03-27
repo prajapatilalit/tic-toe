@@ -1,4 +1,4 @@
-const CalculateWinner = (square) => {
+export function CalculateWinner(square) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -11,13 +11,11 @@ const CalculateWinner = (square) => {
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (square[a] && square[a] == square[b] && square[a] == square[c]) {
+    if (square[a] && square[a] === square[b] && square[a] === square[c]) {
       return square[a];
     }
     return null;
   }
-};
+}
 
 const square = ["null", "null", "null", "X", "X", "O", "null", "null", "null"];
-
-export default CalculateWinner;
