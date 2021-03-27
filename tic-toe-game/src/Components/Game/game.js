@@ -13,12 +13,12 @@ const Game = () => {
   const winner = CalculateWinner(board);
 
   const handleClick = (i) => {
-    const newBoard = [...board];
+    const boardCopy = [...board];
 
-    if (winner || newBoard[i]) return;
+    if (winner || boardCopy[i]) return;
 
-    newBoard[i] = xIsNext ? "X" : "O";
-    setBoard(newBoard);
+    boardCopy[i] = xIsNext ? "X" : "O";
+    setBoard(boardCopy);
     setXisNext(!xIsNext);
   };
 
@@ -32,11 +32,11 @@ const Game = () => {
     <>
       <Board squares={board} onClick={handleClick} />
       <div style={styles}>
-        <p>
+        <h3>
           {winner
             ? "Winner: " + winner
             : "Next Player: " + (xIsNext ? "X" : "O")}
-        </p>
+        </h3>
         {renderMoves()}
       </div>
     </>

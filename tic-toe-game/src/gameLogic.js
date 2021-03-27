@@ -14,8 +14,8 @@ export function CalculateWinner(squares) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
-    return null;
   }
+  return null;
 }
 
-const squares = ["null", "null", "null", "X", "X", "O", "null", "null", "null"];
+// const squares = ["null", "null", "null", "X", "X", "O", "null", "null", "null"];
